@@ -1,0 +1,14 @@
+cd f:
+$ git init new_repo_git
+
+$ touch Collection.java
+$ git add Collection.java
+
+$ git commit -m "Java Programs"
+
+$ git status
+
+$ git remote add origin https://github.com/aakashv129/Learning_Path
+
+$ git push -u origin master
+
