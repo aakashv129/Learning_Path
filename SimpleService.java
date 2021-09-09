@@ -6,6 +6,26 @@ public class SimpleService {
 	
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
+		System.out.println("Printing the whole CSV file");
+		CSVReader reader = null;  
+		try  
+		{  
+		reader = new CSVReader(new FileReader("D:\\Users\\aakashv\\Downloads\\File_First.csv"));  
+		String [] nextLine;  
+		while ((nextLine = reader.readNext()) != null)  
+		{  
+		for(String token : nextLine)  
+		{  
+		System.out.print(token);  
+		}  
+		System.out.print("\n");  
+		}  
+		}  
+		catch (Exception e)   
+		{  
+		e.printStackTrace();  
+		} 
+
 		System.out.println("Printing the topics in CSV file");
 		String line = "";  
 		String splitBy = ",";  
